@@ -366,7 +366,7 @@ function soundRepeat(src) {
 function speedControl(e){
 
     if(e===1){
-        if(myGameArea.scoreCount>800 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < myObstacle.length; i++) {
                 myObstacle[i].x += -2;
                 myObstacle[i].update();
@@ -399,7 +399,7 @@ function speedControl(e){
 
 
 
-        if(myGameArea.scoreCount>800 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < powerUp.length; i++) {
                 powerUp[i].x += -2;
                 powerUp[i].update();
@@ -432,7 +432,7 @@ function speedControl(e){
 
 
         
-        if(myGameArea.scoreCount>800 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < moving.length; i++) {
                 moving[i].x+=-1.5;
                 moving[i].y+=moving[i].dy;
@@ -484,7 +484,7 @@ function speedControl(e){
         }
 
         
-        if(myGameArea.scoreCount>800 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < moving1.length; i++) {
                 moving1[i].x+=-1.5;
                 moving1[i].y+=moving1[i].dy;
