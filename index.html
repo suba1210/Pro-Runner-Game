@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="fav.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<style>
+    body{
+        background: linear-gradient(to bottom right, rgb(241, 104, 104), rgb(238, 238, 79)) no-repeat center center fixed;
+        background-size: cover;    
+    }
+    .head{
+        font-family: 'Otomanopee One', sans-serif;
+        text-align: center;
+        text-shadow: 2px 2px 5px red;
+    }
+    button{
+        border-width:0;
+        border-radius:7px;
+        padding: 10px;
+        font-family: 'Uchen', serif;
+        font-weight: bolder;
+        background-color:rgb(255, 145, 1);
+        margin:1rem;
+    }
+    button:hover{
+        background-color:rgb(243, 167, 67);
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .sideBy{
+        display: flex;
+        flex-direction:row
+    }
+    .sideRows{
+        max-width: 670px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:4em;
+    }
+    ol{
+        font-family: 'Uchen', serif;
+    }
+    h2{
+        font-family: 'Otomanopee One', sans-serif;
+        color:orangered;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    @media(max-width:1050px){
+        .sideBy{
+        display: flex;
+        flex-direction:column;
+        }
+        .sideRows{
+            padding:1em;
+        }
+    }  
+</style>
+<body>
+  <h1 class="head" >Welcome To Pro Runner!</h1>
+   <div class="sideBy">
+       <div class="sideRows">
+           <br>
+           <h2>Instructions to Play</h2>
+           <ol style="display:flex;flex-direction:column;justify-content: center;">
+               <li>Pro Runner will start running when you start the game.</li>
+               <li>When you see the holes, Click empty space or space bar of your computer to move the runner to the opposite side.</li>
+               <li>If the runner touches the holes, the game will be lost.</li>
+               <li>Your score will be based on the distance travelled by the runner.</li>
+               <li>In Hacker Mode, 
+                   <ul>
+                       <li>As the score increase, the runner will move faster and faster.</li>
+                       <li>There will be obstacles moving up and down on the screen, If the runner touches those obstacles, the game will END.</li>
+                       <li>There will power ups in the game area, When the runner touches the power ups, the game will be slowed down for some time.</li>
+                    </ul>
+               </li>
+               
+           </ol>
+       </div>
+       <div class="sideRows">
+           <h2>Proceed to Game</h2>
+           <a href="normal.html"><button class="gameLevel"  style="font-family: 'Otomanopee One', sans-serif;">NORMAL MODE</button></a>
+           <a href="hacker.html"><button class="gameLevel" style="font-family: 'Otomanopee One', sans-serif;">HACKER MODE</button></a>
+       </div>
+   </div>
+</body>
+</html>
