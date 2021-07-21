@@ -21,3 +21,5 @@ Hacker Mode:
 
 Hackermode++:
 - [x] Abeshek wants a unique experience every time he plays the game. So procedurally generate the map.
+
+[Click here to play the game!](https://suba1210.github.io/Pro-Runner-Game/)
