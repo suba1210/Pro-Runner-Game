@@ -119,14 +119,15 @@ let myGameArea = {
         clearInterval(this.interval);
     }
 }
-function startGame() {
 
+function startGame() {
     gameStarts = true;
     myGamePiece = new createComponent(20, 20, "#f09516", 50, 160,"image");
     myScore = new createComponent("15px", "verdana", "#f09516", 120, 20, "text");
     mySound = new sound("lose music.wav");
     myMusic = new soundRepeat("background.wav");
     myMusic.play();
+
     function makeArray(count, content) {
         let result = [];
         if (typeof (content) == "function") {
@@ -157,7 +158,7 @@ function startGame() {
                 else{
                     myObstacle[myObstacle.length]=new createComponent(70, 90, "black", element + 20, 0)
                 }
-            }
+            }    
             else if(randomNum>=0.5 && randomNum<0.9){
                 let holeWid=Math.random();
                 if(holeWid<0.5){
@@ -366,7 +367,7 @@ function soundRepeat(src) {
 function speedControl(e){
 
     if(e===1){
-        if(myGameArea.scoreCount>700 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < myObstacle.length; i++) {
                 myObstacle[i].x += -2;
                 myObstacle[i].update();
@@ -392,14 +393,14 @@ function speedControl(e){
         }
         else{
             for (let i = 0; i < myObstacle.length; i++) {
-                myObstacle[i].x += -1.5;
+                myObstacle[i].x += -1;
                 myObstacle[i].update();
             }
         }
 
 
 
-        if(myGameArea.scoreCount>700 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < powerUp.length; i++) {
                 powerUp[i].x += -2;
                 powerUp[i].update();
@@ -425,14 +426,14 @@ function speedControl(e){
         }
         else{
             for (let i = 0; i < powerUp.length; i++) {
-                powerUp[i].x += -1.5;
+                powerUp[i].x += -1;
                 powerUp[i].update();
             }
         }
 
 
         
-        if(myGameArea.scoreCount>700 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < moving.length; i++) {
                 moving[i].x+=-1.5;
                 moving[i].y+=moving[i].dy;
@@ -474,7 +475,7 @@ function speedControl(e){
         }
         else{
             for (let i = 0; i < moving.length; i++) {
-                moving[i].x+=-1;
+                moving[i].x+=-0.5;
                 moving[i].y+=moving[i].dy;
             if(moving[i].y>160 || moving[i].y<90){
                 moving[i].dy *= -1;
@@ -484,7 +485,7 @@ function speedControl(e){
         }
 
         
-        if(myGameArea.scoreCount>700 && myGameArea.scoreCount<=2000){
+        if(myGameArea.scoreCount>600 && myGameArea.scoreCount<=2000){
             for (let i = 0; i < moving1.length; i++) {
                 moving1[i].x+=-1.5;
                 moving1[i].y+=moving1[i].dy;
@@ -526,7 +527,7 @@ function speedControl(e){
         }
         else{
             for (let i = 0; i < moving1.length; i++) {
-                moving1[i].x+=-1;
+                moving1[i].x+=-0.5;
                 moving1[i].y+=moving1[i].dy;
             if(moving1[i].y>160 || moving1[i].y<90){
                 moving1[i].dy *= -1;
